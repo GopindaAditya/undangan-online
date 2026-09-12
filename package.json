@@ -1,5 +1,5 @@
 {
-  "name": "undangan-dewa-rusmina",
+  "name": "undangan-online",
   "private": true,
   "version": "1.0.0",
   "type": "module",
@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "npm run build && npx wrangler pages deploy dist"
+    "deploy": "npm run build && npx wrangler pages deploy dist --project-name=undangan-online"
   },
   "dependencies": {
     "framer-motion": "^11.11.17",

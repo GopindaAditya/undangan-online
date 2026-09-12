@@ -1,8 +1,4 @@
-# Undangan Dewa Krisna & Rusmina Dewi — React + Vite + Framer Motion
-
-Konversi dari undangan HTML/CSS/JS statis ke React + Vite, animasi pakai
-Framer Motion, RSVP & buku tamu tersimpan ke Google Sheet lewat Google
-Apps Script, deploy ke Cloudflare Pages.
+# Undangan Online
 
 Lihat jawaban chat untuk panduan langkah demi langkah lengkap, atau baca
 `gas/Code.gs` untuk backend RSVP.
@@ -19,8 +15,15 @@ npm run dev
 
 ```bash
 npm run build
-npx wrangler pages deploy dist
+npx wrangler pages deploy dist --project-name=undangan-dewa-rusmina
 ```
+
+> **Penting:** jangan commit `wrangler.toml` ke repo kalau kamu deploy lewat
+> Cloudflare Dashboard + Git integration. Cloudflare akan mendeteksi file
+> itu dan mencoba menjalankan `wrangler deploy` (perintah Workers) alih-alih
+> build otomatis Pages, yang akan gagal dengan error "It looks like you've
+> run a Workers-specific command in a Pages project." Pakai wrangler.toml
+> hanya kalau kamu deploy manual lewat CLI di komputer sendiri.
 
 ## Struktur folder
 
