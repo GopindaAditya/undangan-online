@@ -20,11 +20,11 @@ export default function GallerySection() {
     <section className="w-full px-space-md py-space-lg flex flex-col items-center overflow-hidden">
       {/* Header Section */}
       <Reveal className="text-center max-w-sm mb-space-md">
-        <div className="flex items-center justify-center gap-space-xs text-[#FFD700] mb-space-2xs">
+        <div className="flex items-center justify-center gap-space-xs text-white mb-space-2xs">
           <span className="material-symbols-outlined text-[16px]">photo_camera</span>
           <span className="font-label-gold text-label-gold uppercase tracking-[0.2em]">Dokumentasi Cinta</span>
         </div>
-        <h3 className="font-headline-lg-mobile text-headline-lg-mobile text-[#FFD700] font-medium tracking-wide">
+        <h3 className="font-headline-lg-mobile text-headline-lg-mobile text-white font-medium tracking-wide">
           Galeri Momen Bahagia
         </h3>
         <p className="font-body-md text-body-md text-on-surface-variant mt-space-xs leading-relaxed">
@@ -96,7 +96,7 @@ export default function GallerySection() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => setIsExpanded(!isExpanded)}
-            className="px-6 py-2 rounded-full border border-primary text-[#FFD700] font-label-gold text-[12px] uppercase tracking-widest hover:bg-primary/10 transition-colors flex items-center gap-2"
+            className="px-6 py-2 rounded-full border border-primary text-white font-label-gold text-[12px] uppercase tracking-widest hover:bg-primary/10 transition-colors flex items-center gap-2"
           >
             {isExpanded ? (
               <>

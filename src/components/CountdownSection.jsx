@@ -24,7 +24,7 @@ function TimeBox({ value, label }) {
         initial={{ y: -8, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.3 }}
-        className="font-headline-sm text-headline-sm text-[#FFD700] font-bold"
+        className="font-headline-sm text-headline-sm text-white font-bold"
       >
         {String(value).padStart(2, '0')}
       </motion.span>
@@ -44,7 +44,7 @@ export default function CountdownSection() {
   return (
     <section className="w-full px-space-md py-space-lg flex flex-col items-center">
       <Reveal direction="zoom" className="w-full max-w-sm bg-surface-container rounded-xl p-space-lg shadow-xl shadow-black/60 text-center">
-        <div className="inline-flex items-center gap-1 text-[#FFD700] font-label-gold text-label-gold uppercase tracking-[0.2em] mb-space-xs">
+        <div className="inline-flex items-center gap-1 text-white font-label-gold text-label-gold uppercase tracking-[0.2em] mb-space-xs">
           <span className="material-symbols-outlined text-[16px]">all_inclusive</span>
           <span>Janji Suci Pawiwahan</span>
         </div>

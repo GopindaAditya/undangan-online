@@ -9,11 +9,11 @@ export default function RsvpSection() {
   return (
     <section className="w-full px-space-md py-space-lg flex flex-col items-center" id="rsvp-form">
       <Reveal className="text-center max-w-sm mb-space-md">
-        <div className="flex items-center justify-center gap-space-xs text-[#FFD700] mb-space-2xs">
+        <div className="flex items-center justify-center gap-space-xs text-white mb-space-2xs">
           <span className="material-symbols-outlined text-[16px]">edit_note</span>
           <span className="font-label-gold text-label-gold uppercase tracking-[0.2em]">Buku Tamu Digital</span>
         </div>
-        <h3 className="font-headline-lg-mobile text-headline-lg-mobile text-[#FFD700] font-medium tracking-wide">
+        <h3 className="font-headline-lg-mobile text-headline-lg-mobile text-white font-medium tracking-wide">
           Konfirmasi &amp; Doa Restu
         </h3>
         <p className="font-body-md text-body-md text-on-surface-variant mt-space-xs leading-relaxed">

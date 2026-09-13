@@ -49,14 +49,14 @@ export default function Cover({ guestName, isOpen, onOpen }) {
             {/* Ornamen SVG */}
             <motion.div variants={itemVariants} className="mb-4 flex flex-col items-center">
               <div className="w-14 h-14 rounded-full bg-surface-charcoal/50 backdrop-blur-sm border border-primary/20 flex items-center justify-center">
-                <svg className="w-8 h-8 text-[#FFD700]" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 100 100">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 100 100">
                    <circle cx="50" cy="50" r="44" strokeDasharray="3 3" strokeWidth="1.5" />
                    <circle cx="50" cy="50" r="36" strokeWidth="1" />
                    <path d="M50 20 L50 80 M20 50 L80 50 M50 20 L68 20 M50 80 L32 80 M20 50 L20 32 M80 50 L80 68" strokeLinecap="round" />
                    <circle cx="50" cy="50" fill="currentColor" r="4" />
                 </svg>
               </div>
-              <div className="mt-3 flex items-center gap-2 text-[#FFD700]">
+              <div className="mt-3 flex items-center gap-2 text-white">
                 <span className="w-6 h-[1px] bg-gradient-to-r from-transparent to-primary" />
                 <span className="font-label-gold text-label-gold text-[10px] uppercase tracking-[0.25em]">Om Swastyastu</span>
                 <span className="w-6 h-[1px] bg-gradient-to-l from-transparent to-primary" />
@@ -68,7 +68,7 @@ export default function Cover({ guestName, isOpen, onOpen }) {
               Pawiwahan Sacred Union
             </motion.p>
             <motion.div variants={itemVariants} className="mt-2 text-center">
-              <h2 className="font-display-hero-mobile text-5xl text-[#FFD700] tracking-wide leading-none drop-shadow-lg">
+              <h2 className="font-display-hero-mobile font-bold text-5xl text-white tracking-wide leading-none drop-shadow-lg">
                 {couple.groomShort}
               </h2>
               <div className="flex items-center justify-center my-1 gap-3">
@@ -76,13 +76,13 @@ export default function Cover({ guestName, isOpen, onOpen }) {
                 <span className="font-headline-sm text-lg text-secondary italic font-light">&amp;</span>
                 <span className="w-8 h-[1px] bg-gradient-to-l from-transparent via-primary to-transparent" />
               </div>
-              <h2 className="font-display-hero-mobile text-5xl text-[#FFD700] tracking-wide leading-none drop-shadow-lg">
+              <h2 className="font-display-hero-mobile font-bold text-5xl text-white tracking-wide leading-none drop-shadow-lg">
                 {couple.brideShort}
               </h2>
             </motion.div>
             
             <motion.div variants={itemVariants} className="mt-4">
-              <span className="inline-block px-4 py-1 rounded-full bg-surface-charcoal/60 backdrop-blur-md border border-primary/30 text-[#FFD700] font-label-gold text-[10px] tracking-widest uppercase">
+              <span className="inline-block px-4 py-1 rounded-full bg-surface-charcoal/60 backdrop-blur-md border border-primary/30 text-white font-label-gold text-[10px] tracking-widest uppercase">
                 {couple.date}
               </span>
             </motion.div>
@@ -100,7 +100,7 @@ export default function Cover({ guestName, isOpen, onOpen }) {
                 Kepada Yth. Bapak/Ibu/Saudara/i:
               </span>
               
-              <div className="my-3 px-4 py-1.5 rounded-full bg-white/5 border border-primary/20 text-[#FFD700] font-headline-sm text-lg font-semibold tracking-wide">
+              <div className="my-3 px-4 py-1.5 rounded-full bg-white/5 border border-primary/20 text-white font-headline-sm text-lg font-semibold tracking-wide">
                 {guestName}
               </div>
               

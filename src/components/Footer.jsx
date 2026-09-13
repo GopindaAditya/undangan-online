@@ -10,7 +10,7 @@ export default function Footer() {
           target="_blank"
           rel="noreferrer"
         >
-          <span className="material-symbols-outlined text-[16px] text-[#FFD700]">photo_camera</span>
+          <span className="material-symbols-outlined text-[16px] text-white">photo_camera</span>
           <span>Instagram</span>
         </a>
         <a
@@ -19,13 +19,13 @@ export default function Footer() {
           target="_blank"
           rel="noreferrer"
         >
-          <span className="material-symbols-outlined text-[16px] text-[#FFD700]">chat</span>
+          <span className="material-symbols-outlined text-[16px] text-white">chat</span>
           <span>WhatsApp</span>
         </a>
       </div>
 
       <div className="w-full max-w-sm mb-space-md">
-        <p className="font-title-mantra text-title-mantra text-[#FFD700] italic leading-relaxed">
+        <p className="font-title-mantra text-title-mantra text-white italic leading-relaxed">
           &ldquo;Om I Hyang Widhi Wasa, Awig Kertia Wara Nugraha ring Sang Hyang Semara Ratih&rdquo;
         </p>
         <p className="font-headline-sm text-headline-sm text-secondary tracking-widest uppercase mt-2">
