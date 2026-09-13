@@ -3,7 +3,7 @@
 import photoCover from '../assets/ANG_2431.webp'
 import photoHeader from '../assets/ANG_2599.webp'
 import profileBligus from '../assets/profilebligus.jpg'
-import profileCintya from '../assets/profileCintya.jpg'
+import profileCintya from '../assets/profilecintya.jpg'
 
 export const couple = {
   groomShort: 'Suryagraha',
