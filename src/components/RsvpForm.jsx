@@ -94,7 +94,7 @@ export default function RsvpForm({ onSubmitted }) {
               <option value="3">3 Orang</option>
               <option value="4">4 Orang (Maksimal)</option>
             </select>
-            <span className="material-symbols-outlined text-primary text-[18px] absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none">
+            <span className="material-symbols-outlined text-[#FFD700] text-[18px] absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none">
               expand_more
             </span>
           </div>
@@ -126,7 +126,7 @@ export default function RsvpForm({ onSubmitted }) {
         </motion.button>
 
         {status === 'sent' && (
-          <p className="text-center text-xs text-primary">Matur suksma! Doa restu Anda telah tersimpan.</p>
+          <p className="text-center text-xs text-[#FFD700]">Matur suksma! Doa restu Anda telah tersimpan.</p>
         )}
         {status === 'error' && (
           <p className="text-center text-xs text-error">{errorMsg || 'Gagal mengirim, coba lagi.'}</p>

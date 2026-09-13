@@ -10,7 +10,7 @@ export default function Footer() {
           target="_blank"
           rel="noreferrer"
         >
-          <span className="material-symbols-outlined text-[16px] text-primary">photo_camera</span>
+          <span className="material-symbols-outlined text-[16px] text-[#FFD700]">photo_camera</span>
           <span>Instagram</span>
         </a>
         <a
@@ -19,13 +19,13 @@ export default function Footer() {
           target="_blank"
           rel="noreferrer"
         >
-          <span className="material-symbols-outlined text-[16px] text-primary">chat</span>
+          <span className="material-symbols-outlined text-[16px] text-[#FFD700]">chat</span>
           <span>WhatsApp</span>
         </a>
       </div>
 
       <div className="w-full max-w-sm mb-space-md">
-        <p className="font-title-mantra text-title-mantra text-primary italic leading-relaxed">
+        <p className="font-title-mantra text-title-mantra text-[#FFD700] italic leading-relaxed">
           &ldquo;Om I Hyang Widhi Wasa, Awig Kertia Wara Nugraha ring Sang Hyang Semara Ratih&rdquo;
         </p>
         <p className="font-headline-sm text-headline-sm text-secondary tracking-widest uppercase mt-2">
@@ -34,7 +34,7 @@ export default function Footer() {
       </div>
       <div className="w-16 h-[1px] bg-outline-variant my-space-sm" />
       <p className="font-label-caption text-label-caption text-text-muted uppercase tracking-[0.2em] text-[10px]">
-        Pawiwahan Tugus Surya &amp; Cinthya Ariska • Gianyar, Bali
+        Pawiwahan Suryagraha &amp; Cinthya Ariska • Gianyar, Bali
       </p>
       <p className="font-label-caption text-[9px] text-text-muted/60 mt-1">
         Undangan Online Bali © 2023 • All rights reserved

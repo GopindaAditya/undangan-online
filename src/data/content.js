@@ -1,13 +1,13 @@
 // Semua teks & data yang tadinya hardcoded di HTML dipusatkan di sini,
 // supaya gampang diubah tanpa menyentuh komponen.
-import photoCover from '../assets/ANG_2431.jpg'
-import photoHeader from '../assets/ANG_2599.jpg'
+import photoCover from '../assets/ANG_2431.webp'
+import photoHeader from '../assets/ANG_2599.webp'
 
 export const couple = {
-  groomShort: 'Tugus Surya',
+  groomShort: 'Suryagraha',
   brideShort: 'Cinthya Ariska',
-  date: 'Jumat Umanis, 12 November 2026',
-  hijriOrBaliDate: 'Jumat, 12 November 2026',
+  date: 'Senin Umanis, 12 Oktober 2026',
+  hijriOrBaliDate: 'Senin, 12 Oktober 2026',
   photo:  photoCover
 }
 
@@ -45,13 +45,20 @@ export const event = {
 
 export const heroImage = photoHeader
 
-export const gallery = [
-  'https://lh3.googleusercontent.com/aida-public/AB6AXuC8UR02uX8vgab3LufiWSDRI42Ntdn_y06_V52lKjHa5y7taPDJh-uSva9fvnszvdyDHxZRVUERa6DkKTdsQ_yBdceYYZObQ4Z-XvtLxwqtd9fBjoTKJ7CTsu0htKFiBL8bBkL1ApAsG9SLYIFxZnOyEaUR9jIBjgIZ9sW_lnW1ak_KtLlFzC1dE6FoQFfq_k6MXZ2JicXnhygdE20ycQV5E9YJFQgwmETJykNc8KwnqZOS44fnfLs',
-  'https://lh3.googleusercontent.com/aida-public/AB6AXuCNP9wzZu043so5l3H4tjFAC5ggI0ZRtVkTZPCMDS1Hb6j2vfW0zjQpNku-ryzUj3Hdr7CDpOMWW1yCzAXBVj1y9T-so23rRxvzrB6rEcKIjxcoIdYRnbiZtskqhUjgrvbIFXXzpfOYFsuCtApkM0V_ZPENRdXMEf7KCh44DNqKQrw4CXuMbKtr6mqPEQAsjtJzrI_Wribvzdv1X-RbSX5iX7zwXw_ndxV3AW5ZOGKjPCyvIevQdXA',
-  'https://lh3.googleusercontent.com/aida-public/AB6AXuDmV1biFt_c53hZz7ekd_C3ZOnOcrQA8liOMtGllxcxSswiVHIcFMFebNDkX0PDpIZc4L4mWFPrG5J16QuonHDZlziv_rri326Ik23QgZuEgeRn2dr7I8nKdxqvJPzqrSCWPNFB4mYk-4vFUqcPfhWWtt_dE5KAae_6cTB2CAi3a0Yp3TPxz5Hudy2Y32DWTxR51Pn1uY65uMdWBWCzI44RGMW8WFzQkqYEAadbzSm1pHWFauZpsBM',
-  'https://lh3.googleusercontent.com/aida-public/AB6AXuBl37dKuJeN0LnGDZDt8zq7d_65kAxzRUfxWwG84Dq8QZ0wJpwwKFYNa39FaNXBPARaKOJqsUXrF_pI6NARnvtkHCfoCuMH76u_6esYoB8ugN5e_BenvecPs0U-GggU5p98duMHgBh2l8kzi98Rsw2BPfOTz80iA0oEpiDK8SajQpFui6SlAIzxF8zU70zmX1kb8EwtNqitdRe4YeDuYTzWrNiAuPbHrdHKbaAWSWv3ncQeIJx4d3o',
-  heroImage,
-]
+const payasImages = import.meta.glob('../assets/*.{jpg,JPG,jpeg,png,webp}', { 
+  eager: true, 
+  import: 'default' 
+});
+
+const modernImages = import.meta.glob('../assets/modern/*.{jpg,JPG,jpeg,png,webp}', { 
+  eager: true, 
+  import: 'default' 
+});
+
+export const galleryData = {  
+  'Payas Agung': Object.values(payasImages),
+  'Modern Editorial': Object.values(modernImages)
+};
 
 // URL Web App dari Google Apps Script (lihat panduan deploy GAS).
 // Ganti dengan URL /exec hasil deploy kamu sendiri.

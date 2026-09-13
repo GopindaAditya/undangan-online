@@ -43,7 +43,7 @@ export default function WishesStream({ refreshKey }) {
   return (
     <div className="w-full max-w-sm mt-space-lg">
       <div className="flex items-center justify-between px-space-xs mb-space-2xs">
-        <div className="flex items-center gap-1.5 text-primary">
+        <div className="flex items-center gap-1.5 text-[#FFD700]">
           <span className="material-symbols-outlined text-[18px]">forum</span>
           <span className="font-label-gold text-label-gold uppercase tracking-wider">Untaian Doa</span>
         </div>
@@ -71,18 +71,18 @@ export default function WishesStream({ refreshKey }) {
             >
               <div className="flex items-center justify-between mb-space-xs">
                 <div className="flex items-center gap-space-xs">
-                  <div className="w-8 h-8 rounded-full bg-surface-charcoal text-primary flex items-center justify-center font-headline-sm text-[13px] font-bold">
+                  <div className="w-8 h-8 rounded-full bg-surface-charcoal text-[#FFD700] flex items-center justify-center font-headline-sm text-[13px] font-bold">
                     {initialsOf(w.name)}
                   </div>
                   <div>
-                    <h6 className="font-headline-sm text-[16px] text-primary leading-none font-medium">{w.name}</h6>
+                    <h6 className="font-headline-sm text-[16px] text-[#FFD700] leading-none font-medium">{w.name}</h6>
                     <span className="font-label-caption text-[10px] text-text-muted">{timeAgo(w.timestamp)}</span>
                   </div>
                 </div>
                 <span
                   className={`px-2 py-0.5 rounded-full font-label-caption text-[9px] uppercase tracking-wider flex items-center gap-1 ${
                     w.attendance === 'hadir'
-                      ? 'bg-surface-container text-primary'
+                      ? 'bg-surface-container text-[#FFD700]'
                       : 'bg-surface-container text-secondary'
                   }`}
                 >
