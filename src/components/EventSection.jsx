@@ -21,11 +21,11 @@ export default function EventSection() {
         <div className="bg-surface-elevated p-space-md flex items-center justify-between">
           <div className="flex items-center gap-space-md">
             <div className="flex flex-col items-center justify-center w-14 h-14 rounded-lg bg-surface-charcoal text-primary shadow-md">
-              <span className="font-label-gold text-[10px] tracking-widest uppercase text-secondary">Rabu</span>
+              <span className="font-label-gold text-[10px] tracking-widest uppercase text-secondary">Jumat</span>
               <span className="font-headline-md text-headline-md leading-none font-bold text-primary">12</span>
             </div>
             <div className="flex flex-col">
-              <span className="font-headline-sm text-headline-sm text-primary leading-tight">Januari 2022</span>
+              <span className="font-headline-sm text-headline-sm text-primary leading-tight">November 2026</span>
               <span className="font-label-caption text-label-caption text-secondary tracking-wider uppercase">
                 Dewasa Ayu (Hari Baik)
               </span>
@@ -71,7 +71,7 @@ export default function EventSection() {
             <div className="absolute inset-0 bg-gradient-to-t from-surface-charcoal/90 via-transparent to-transparent flex items-end p-space-sm">
               <span className="inline-flex items-center gap-1 text-[11px] text-primary bg-surface-charcoal/80 px-space-xs py-0.5 rounded-full backdrop-blur-md">
                 <span className="material-symbols-outlined text-[14px]">pin_drop</span>
-                Samplangan, Gianyar
+                Baler bale agung
               </span>
             </div>
           </div>
@@ -95,14 +95,14 @@ export default function EventSection() {
             </a>
           </div>
 
-          <div className="p-space-sm rounded-lg bg-surface-elevated flex items-center gap-space-sm mt-space-sm">
+          {/* <div className="p-space-sm rounded-lg bg-surface-elevated flex items-center gap-space-sm mt-space-sm">
             <div className="w-10 h-10 rounded bg-surface-charcoal flex items-center justify-center text-primary shrink-0">
               <span className="material-symbols-outlined text-[22px]">qr_code_scanner</span>
             </div>
             <p className="font-label-caption text-label-caption text-text-muted leading-relaxed">
               Scan barcode saat memasuki tempat acara untuk registrasi buku tamu digital.
             </p>
-          </div>
+          </div> */}
         </div>
       </Reveal>
     </section>
