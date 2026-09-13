@@ -73,7 +73,7 @@ export default function EventSection() {
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              className="absolute inset-0 grayscale contrast-125 opacity-90" // Menyesuaikan warna maps agar elegan dengan tema gelap
+              className="absolute inset-0 contrast-125 opacity-90" // Menyesuaikan warna maps agar elegan dengan tema gelap
             ></iframe>
           </div>
 

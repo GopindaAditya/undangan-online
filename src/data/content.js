@@ -45,12 +45,12 @@ export const event = {
 
 export const heroImage = photoHeader
 
-const payasImages = import.meta.glob('../assets/*.{webp}', { 
+const payasImages = import.meta.glob('../assets/*.{png,webp}', { 
   eager: true, 
   import: 'default' 
 });
 
-const modernImages = import.meta.glob('../assets/modern/*.{webp}', { 
+const modernImages = import.meta.glob('../assets/modern/*.{png,webp}', { 
   eager: true, 
   import: 'default' 
 });
