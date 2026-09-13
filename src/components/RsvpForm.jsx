@@ -45,8 +45,7 @@ export default function RsvpForm({ onSubmitted }) {
             type="text"
             value={form.name}
             onChange={(e) => update('name', e.target.value)}
-          />
-          <span className="font-label-caption text-[10px] text-text-muted">*Khusus untuk tamu undangan</span>
+          />          
         </div>
 
         <div className="flex flex-col gap-space-2xs">
@@ -79,7 +78,7 @@ export default function RsvpForm({ onSubmitted }) {
           </div>
         </div>
 
-        <div className="flex flex-col gap-space-2xs">
+        {/* <div className="flex flex-col gap-space-2xs">
           <label className="font-label-gold text-label-gold uppercase text-secondary tracking-wider">
             Jumlah Tamu
           </label>
@@ -98,7 +97,7 @@ export default function RsvpForm({ onSubmitted }) {
               expand_more
             </span>
           </div>
-        </div>
+        </div> */}
 
         <div className="flex flex-col gap-space-2xs">
           <label className="font-label-gold text-label-gold uppercase text-secondary tracking-wider">

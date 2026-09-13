@@ -63,17 +63,18 @@ export default function EventSection() {
             </div>
           </div>
 
-          <div className="relative w-full h-44 rounded-lg overflow-hidden mt-space-sm shadow-md">
-            <div
-              className="w-full h-full bg-cover bg-center"
-              style={{ backgroundImage: `url('${event.bannerImage}')` }}
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-surface-charcoal/90 via-transparent to-transparent flex items-end p-space-sm">
-              <span className="inline-flex items-center gap-1 text-[11px] text-white bg-surface-charcoal/80 px-space-xs py-0.5 rounded-full backdrop-blur-md">
-                <span className="material-symbols-outlined text-[14px]">pin_drop</span>
-                Baler bale agung
-              </span>
-            </div>
+          {/* REVISI BAGIAN MAPS INTERAKTIF */}
+          <div className="relative w-full h-60 rounded-lg overflow-hidden mt-space-sm shadow-md border border-white/10">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3490.0332701010907!2d114.64189307501101!3d-8.353384891683405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zOMKwMjEnMTIuMiJTIDExNMKwMzgnNDAuMSJF!5e1!3m2!1sen!2sid!4v1789279949198!5m2!1sen!2sid" 
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="absolute inset-0 grayscale contrast-125 opacity-90" // Menyesuaikan warna maps agar elegan dengan tema gelap
+            ></iframe>
           </div>
 
           <div className="flex flex-col gap-space-xs pt-space-xs">
@@ -84,7 +85,7 @@ export default function EventSection() {
               rel="noreferrer"
             >
               <span className="material-symbols-outlined text-[18px]">near_me</span>
-              <span>Petunjuk Arah (Google Maps)</span>
+              <span>Buka di Aplikasi Maps</span>
             </a>
             <a
               className="w-full py-space-sm px-space-md rounded-lg bg-primary text-on-primary font-label-gold text-label-gold uppercase tracking-widest flex items-center justify-center gap-space-xs active:scale-95 transition-transform shadow-lg shadow-primary/20"
@@ -94,15 +95,6 @@ export default function EventSection() {
               <span>Konfirmasi Kehadiran</span>
             </a>
           </div>
-
-          {/* <div className="p-space-sm rounded-lg bg-surface-elevated flex items-center gap-space-sm mt-space-sm">
-            <div className="w-10 h-10 rounded bg-surface-charcoal flex items-center justify-center text-white shrink-0">
-              <span className="material-symbols-outlined text-[22px]">qr_code_scanner</span>
-            </div>
-            <p className="font-label-caption text-label-caption text-text-muted leading-relaxed">
-              Scan barcode saat memasuki tempat acara untuk registrasi buku tamu digital.
-            </p>
-          </div> */}
         </div>
       </Reveal>
     </section>
