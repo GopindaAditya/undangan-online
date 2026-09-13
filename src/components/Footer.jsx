@@ -34,7 +34,7 @@ export default function Footer() {
       </div>
       <div className="w-16 h-[1px] bg-outline-variant my-space-sm" />
       <p className="font-label-caption text-label-caption text-text-muted uppercase tracking-[0.2em] text-[10px]">
-        Pawiwahan Dewa Krisna &amp; Rusmina Dewi • Gianyar, Bali
+        Pawiwahan Tugus Surya &amp; Cinthya Ariska • Gianyar, Bali
       </p>
       <p className="font-label-caption text-[9px] text-text-muted/60 mt-1">
         Undangan Online Bali © 2023 • All rights reserved

@@ -1,102 +1,127 @@
 import { motion, AnimatePresence } from 'framer-motion'
-import { couple, groom, bride } from '../data/content'
+import { couple } from '../data/content'
 
 export default function Cover({ guestName, isOpen, onOpen }) {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: { staggerChildren: 0.2, delayChildren: 0.3 }
+    }
+  }
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
+  }
+
   return (
     <AnimatePresence>
       {!isOpen && (
         <motion.section
-          className="fixed inset-0 z-[100] w-full min-h-screen overflow-y-auto px-space-md py-space-xl flex flex-col items-center text-center bg-surface"
+          // Perubahan kunci: h-[100dvh], overflow-hidden, dan flex justify-between
+          className="fixed inset-0 z-[100] w-full h-[100dvh] overflow-hidden flex flex-col justify-between items-center bg-surface-charcoal"
           initial={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: '-100%' }}
-          transition={{ duration: 0.8, ease: 'easeInOut' }}
+          exit={{ opacity: 0, y: '-100%', scale: 0.95 }}
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
         >
-          <div className="absolute -top-16 left-1/2 -translate-x-1/2 w-72 h-72 rounded-full bg-primary/10 blur-3xl pointer-events-none" />
-
-          <div className="relative z-10 mb-space-md flex flex-col items-center">
-            <div className="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center shadow-xl shadow-black/60">
-              <motion.svg
-                className="w-9 h-9 text-primary"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="3"
-                viewBox="0 0 100 100"
-                animate={{ rotate: 360 }}
-                transition={{ duration: 12, repeat: Infinity, ease: 'linear' }}
-              >
-                <circle cx="50" cy="50" r="44" stroke="currentColor" strokeDasharray="3 3" strokeWidth="1.5" />
-                <circle cx="50" cy="50" r="36" stroke="currentColor" strokeWidth="1" />
-                <path
-                  d="M50 20 L50 80 M20 50 L80 50 M50 20 L68 20 M50 80 L32 80 M20 50 L20 32 M80 50 L80 68"
-                  strokeLinecap="round"
-                />
-                <circle cx="50" cy="50" fill="currentColor" r="4" />
-                <circle cx="50" cy="20" fill="currentColor" r="2" />
-                <circle cx="50" cy="80" fill="currentColor" r="2" />
-                <circle cx="20" cy="50" fill="currentColor" r="2" />
-                <circle cx="80" cy="50" fill="currentColor" r="2" />
-              </motion.svg>
-            </div>
-            <div className="mt-space-sm flex items-center gap-space-xs text-primary">
-              <span className="w-8 h-[1px] bg-gradient-to-r from-transparent to-primary" />
-              <span className="font-label-gold text-label-gold uppercase tracking-[0.25em]">Om Swastyastu</span>
-              <span className="w-8 h-[1px] bg-gradient-to-l from-transparent to-primary" />
-            </div>
+          
+          {/* 1. BACKGROUND FOTO & GRADIENT OVERLAY */}
+          <div className="absolute inset-0 z-0">
+            <motion.img 
+              animate={{ scale: [1, 1.05, 1] }} 
+              transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+              src={couple.photo} // Gunakan foto vertikal/portrait berdua
+              alt="Background Cover" 
+              className="w-full h-full object-cover object-center"
+            />
+            {/* Gradient agar teks di atas & tombol di bawah tetap terbaca jelas */}
+            <div className="absolute inset-0 bg-gradient-to-b from-surface-charcoal/90 via-surface-charcoal/40 to-surface-charcoal/95" />
           </div>
 
-          <p className="font-headline-sm text-headline-sm text-secondary tracking-widest uppercase mb-space-2xs">
-            Pawiwahan Sacred Union
-          </p>
-          <p className="font-label-caption text-label-caption italic text-on-surface-variant mb-space-lg tracking-wider">
-            &ldquo;We found the love in divine harmony&rdquo;
-          </p>
-
-          <div className="my-space-md">
-            <h2 className="font-display-hero-mobile text-display-hero-mobile text-primary tracking-wide leading-tight">
-              {couple.groomShort}
-            </h2>
-            <div className="flex items-center justify-center my-space-xs gap-space-sm">
-              <span className="w-12 h-[1px] bg-gradient-to-r from-transparent via-primary to-transparent" />
-              <span className="font-headline-sm text-headline-sm text-secondary italic font-light">&amp;</span>
-              <span className="w-12 h-[1px] bg-gradient-to-l from-transparent via-primary to-transparent" />
-            </div>
-            <h2 className="font-display-hero-mobile text-display-hero-mobile text-primary tracking-wide leading-tight">
-              {couple.brideShort}
-            </h2>
-          </div>
-
-          <div className="w-full max-w-sm shrink-0 mt-space-md mb-space-lg rounded-xl overflow-hidden bg-surface-charcoal p-space-xs shadow-xl shadow-black/80">
-            <div className="relative w-full h-80 rounded-lg overflow-hidden">
-              <img className="w-full h-full object-cover brightness-90" src={groom.photo} alt="Sampul undangan" />
-              <div className="absolute inset-0 bg-gradient-to-t from-surface-charcoal via-transparent to-transparent" />
-              <div className="absolute bottom-3 inset-x-3 text-center">
-                <span className="inline-block px-space-sm py-1 rounded-full bg-surface-charcoal/90 backdrop-blur-md text-primary font-label-gold text-[10px] tracking-widest uppercase">
-                  {couple.date}
-                </span>
+          {/* 2. BAGIAN ATAS (Mandala & Nama) */}
+          <motion.div 
+            variants={containerVariants} 
+            initial="hidden" 
+            animate="show" 
+            className="relative z-10 w-full flex flex-col items-center pt-8 sm:pt-12 px-6"
+          >
+            {/* Ornamen SVG */}
+            <motion.div variants={itemVariants} className="mb-4 flex flex-col items-center">
+              <div className="w-14 h-14 rounded-full bg-surface-charcoal/50 backdrop-blur-sm border border-primary/20 flex items-center justify-center">
+                <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 100 100">
+                   <circle cx="50" cy="50" r="44" strokeDasharray="3 3" strokeWidth="1.5" />
+                   <circle cx="50" cy="50" r="36" strokeWidth="1" />
+                   <path d="M50 20 L50 80 M20 50 L80 50 M50 20 L68 20 M50 80 L32 80 M20 50 L20 32 M80 50 L80 68" strokeLinecap="round" />
+                   <circle cx="50" cy="50" fill="currentColor" r="4" />
+                </svg>
               </div>
-            </div>
-          </div>
+              <div className="mt-3 flex items-center gap-2 text-primary">
+                <span className="w-6 h-[1px] bg-gradient-to-r from-transparent to-primary" />
+                <span className="font-label-gold text-label-gold text-[10px] uppercase tracking-[0.25em]">Om Swastyastu</span>
+                <span className="w-6 h-[1px] bg-gradient-to-l from-transparent to-primary" />
+              </div>
+            </motion.div>
 
-          <div className="w-full max-w-sm bg-surface-elevated rounded-xl p-space-lg shadow-2xl shadow-black/70 flex flex-col items-center">
-            <span className="font-label-caption text-label-caption uppercase tracking-[0.2em] text-on-surface-variant">
-              Kepada Yth. Bapak / Ibu / Saudara / i:
-            </span>
-            <div className="my-space-sm px-space-md py-space-xs rounded-full bg-surface-charcoal text-primary font-headline-sm text-headline-sm font-semibold tracking-wide">
-              {guestName}
-            </div>
-            <p className="font-label-caption text-label-caption text-text-muted max-w-xs text-center leading-relaxed">
-              Mohon maaf apabila ada kesalahan penulisan nama maupun gelar pada lembar digital ini.
-            </p>
+            {/* Judul & Nama */}
+            <motion.p variants={itemVariants} className="font-headline-sm text-[12px] text-secondary tracking-widest uppercase mb-1">
+              Pawiwahan Sacred Union
+            </motion.p>
+            <motion.div variants={itemVariants} className="mt-2 text-center">
+              <h2 className="font-display-hero-mobile text-5xl text-primary tracking-wide leading-none drop-shadow-lg">
+                {couple.groomShort}
+              </h2>
+              <div className="flex items-center justify-center my-1 gap-3">
+                <span className="w-8 h-[1px] bg-gradient-to-r from-transparent via-primary to-transparent" />
+                <span className="font-headline-sm text-lg text-secondary italic font-light">&amp;</span>
+                <span className="w-8 h-[1px] bg-gradient-to-l from-transparent via-primary to-transparent" />
+              </div>
+              <h2 className="font-display-hero-mobile text-5xl text-primary tracking-wide leading-none drop-shadow-lg">
+                {couple.brideShort}
+              </h2>
+            </motion.div>
+            
+            <motion.div variants={itemVariants} className="mt-4">
+              <span className="inline-block px-4 py-1 rounded-full bg-surface-charcoal/60 backdrop-blur-md border border-primary/30 text-primary font-label-gold text-[10px] tracking-widest uppercase">
+                {couple.date}
+              </span>
+            </motion.div>
+          </motion.div>
 
-            <motion.button
-              onClick={onOpen}
-              whileTap={{ scale: 0.95 }}
-              className="mt-space-md w-full py-space-sm px-space-md rounded-lg bg-gradient-to-r from-primary via-primary-fixed to-primary-container text-on-primary font-label-gold text-label-gold uppercase tracking-[0.16em] flex items-center justify-center gap-space-xs shadow-lg shadow-primary/20"
-            >
-              <span className="material-symbols-outlined text-[18px]">drafts</span>
-              <span>Buka Undangan</span>
-            </motion.button>
-          </div>
+          {/* 3. BAGIAN BAWAH (Kartu Tamu & Tombol) */}
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1, duration: 0.8 }}
+            className="relative z-10 w-full max-w-sm px-6 pb-8 sm:pb-10 flex flex-col items-center"
+          >
+            <div className="w-full bg-surface-charcoal/60 backdrop-blur-xl border border-white/10 rounded-2xl p-5 shadow-2xl flex flex-col items-center text-center">
+              <span className="font-label-caption text-[10px] uppercase tracking-[0.2em] text-on-surface-variant">
+                Kepada Yth. Bapak/Ibu/Saudara/i:
+              </span>
+              
+              <div className="my-3 px-4 py-1.5 rounded-full bg-white/5 border border-primary/20 text-primary font-headline-sm text-lg font-semibold tracking-wide">
+                {guestName}
+              </div>
+              
+              <p className="font-label-caption text-[9px] text-text-muted max-w-xs leading-relaxed mb-4">
+                Mohon maaf apabila ada kesalahan penulisan nama maupun gelar.
+              </p>
+
+              <motion.button
+                onClick={onOpen}
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.95 }}
+                animate={{ boxShadow: ["0px 0px 0px rgba(0,0,0,0)", "0px 0px 15px rgba(184,134,11,0.5)", "0px 0px 0px rgba(0,0,0,0)"] }}
+                transition={{ duration: 2, repeat: Infinity }}
+                className="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-primary via-primary-fixed to-primary-container text-on-primary font-label-gold text-[12px] uppercase tracking-[0.16em] flex items-center justify-center gap-2"
+              >
+                <span className="material-symbols-outlined text-[18px]">drafts</span>
+                <span className="font-bold">Buka Undangan</span>
+              </motion.button>
+            </div>
+          </motion.div>
+
         </motion.section>
       )}
     </AnimatePresence>
