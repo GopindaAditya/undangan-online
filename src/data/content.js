@@ -62,5 +62,5 @@ export const galleryData = {
 
 // URL Web App dari Google Apps Script (lihat panduan deploy GAS).
 // Ganti dengan URL /exec hasil deploy kamu sendiri.
-export const GAS_ENDPOINT =
-  import.meta.env.VITE_GAS_ENDPOINT || 'https://script.google.com/macros/s/AKfycbw7JKzT5DSYz_NPbLp8fPajraIHXWF2sUkLUnTu5pMiktpk5RJSCLm2iijkL9V7WUzATw/exec'
+export const GAS_ENDPOINT = 'https://script.google.com/macros/s/AKfycbw7JKzT5DSYz_NPbLp8fPajraIHXWF2sUkLUnTu5pMiktpk5RJSCLm2iijkL9V7WUzATw/exec'
+  
