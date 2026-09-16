@@ -26,7 +26,7 @@ export default function Footer() {
 
       <div className="w-full max-w-sm mb-space-md">
         <p className="font-title-mantra text-title-mantra text-white italic leading-relaxed">
-          &ldquo;Om I Hyang Widhi Wasa, Awig Kertia Wara Nugraha ring Sang Hyang Semara Ratih&rdquo;
+          &ldquo;Om Ida Hyang Widhi Wasa, Awig Kertia Wara Nugraha ring Sang Hyang Semara Ratih&rdquo;
         </p>
         <p className="font-headline-sm text-headline-sm text-secondary tracking-widest uppercase mt-2">
           Om Shanti Shanti Shanti Om
